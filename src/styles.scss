@@ -5,7 +5,8 @@
   --dark-color: #000000;
   --light-color: #FFFFFF;
   --primary-color: #AE7AFF;
-  --gray-color: #5F646D
+  --gray-color: #5F646D;
+  --dark-hover-color: #161616;
 }
 *,
 *:before,
@@ -14,15 +15,22 @@
   margin: 0;
   padding: 0;
 }
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
 
 body {
+  height: 100dvh;
   font-family: "JetBrains", sans-serif;
   background: var(--dark-color);
   color: var(--light-color);
   background-image: url(/assets/images/bg.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
 }
 
 .skill-tag {
