@@ -1,0 +1,22 @@
+<img [src]="preview()" alt="" class="avatar">
+
+<div
+  dnd
+  (keyup.enter)="fileDrop.click()"
+  (onDnd)="onFileDropped($event)"
+  class="dropzone"
+  tabindex="0"
+>
+  <div class="dropzone-content">
+    <svg icon="upload"/>
+    <span class="medium-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, explicabo!</span>
+  </div>
+
+  <input
+    #fileDrop
+    class="avatar-input"
+    tabindex="-1"
+    type="file"
+    (change)="fileBrowserHandle($event)"
+  >
+</div>

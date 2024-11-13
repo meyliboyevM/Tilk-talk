@@ -30,12 +30,15 @@ export class SidebarComponent {
   subscribers$ = this.profileService.getSubscribersShortList()
 
   me = this.profileService.me
+  constructor() {
+      this.profileService.getMe().subscribe()
+  }
 
   menuItems = [
     {
       label: 'Моя страница',
       icon: 'home',
-      link: ''
+      link: 'profile/me'
     },
     {
       label: 'Чаты',

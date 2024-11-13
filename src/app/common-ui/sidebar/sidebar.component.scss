@@ -9,6 +9,7 @@
 .main-menu-list {
   display: grid;
   grid-gap: 8px;
+  margin-bottom: 20px;
 
   .active {
     background: var(--dark-hover-color);
@@ -42,6 +43,7 @@
     }
   }
 }
+
 .menu-item svg {
   width: 24px;
   height: 24px;
@@ -52,15 +54,19 @@
   gap: 10px;
   align-items: center;
 }
+
 .to-subscribers-link {
   color: var(--primary-color);
 }
+
 .to-subscriber-icon {
   width: 18px;
   height: 18px;
 }
+
 .sidebar-footer {
   position: absolute;
+  width: calc(100% - 20px);
   bottom: 20px;
   border-radius: 2px;
   background: var(--dark-hover-color);
@@ -84,7 +90,7 @@
 
 .settings-btn {
   svg {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
   }
 }
