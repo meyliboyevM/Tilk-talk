@@ -1,0 +1,13 @@
+<div class="comment__wrapper">
+  <div>
+    @if (comment.author) {
+      <img [src]="comment.author.avatarUrl | imgUrl" alt="">
+    } @else {
+      <img src="/assets/images/avatar-pl.jpg" alt="">
+    }
+  </div>
+  <div class="comment__header">
+    <div class="comment__username">{{comment.author.username}} <div class="subtitle">{{getDate(comment.createdAt)}}</div></div>
+    <span class="subtitle">{{comment.text}}</span>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+img {
+  width: 30px ;
+  height: 30px ;
+  border-radius: 50%;
+}
+
+.comment {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__header {
+
+  }
+
+  &__username {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+}

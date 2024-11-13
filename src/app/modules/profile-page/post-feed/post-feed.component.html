@@ -1,2 +1,8 @@
 <app-post-input/>
-<app-post/>
+<div class="post-wrapper">
+  @for (post of posts; track post) {
+    <div>
+      <app-post [post]="post"/>
+    </div>
+  }
+</div>

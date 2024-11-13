@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {PostInputComponent} from '../post-input/post-input.component';
 import {PostComponent} from '../post/post.component';
+import {ProfileService} from '../../../shared/services/profile.service';
+import {PostService} from '../../../shared/services/post.service';
 
 @Component({
   selector: 'app-post-feed',
@@ -13,5 +15,13 @@ import {PostComponent} from '../post/post.component';
   styleUrl: './post-feed.component.scss'
 })
 export class PostFeedComponent {
+  postService = inject(PostService);
+  posts: any
+
+  ngOnInit() {
+    this.postService.getPosts().subscribe(posts => {
+      this.posts = posts
+    })
+  }
 
 }

@@ -25,6 +25,23 @@ a {
   color: transparent;
 }
 
+// Scroll bar style -=- start
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
+// Scroll bar style -=- end
+
 body {
   height: 100dvh;
   font-family: "JetBrains", sans-serif;

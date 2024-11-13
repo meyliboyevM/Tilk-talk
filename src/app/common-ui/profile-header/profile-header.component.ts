@@ -12,7 +12,5 @@ import {ImgUrlPipe} from '../../shared/pipes/img-url.pipe';
   styleUrl: './profile-header.component.scss'
 })
 export class ProfileHeaderComponent {
-
   profile = input<Profile>()
-
 }

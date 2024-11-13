@@ -1,1 +1,32 @@
-<p>post works!</p>
+<div class="post-header">
+  @if (post.author) {
+    <img [src]="post.author.avatarUrl | imgUrl" alt="">
+  } @else {
+    <img src="/assets/images/avatar-pl.jpg" alt="">
+  }
+</div>
+<div class="post-body">
+  <div class="name-text">
+    <h4>{{ post.author.firstName }} {{ post.author.lastName }}</h4>
+    <!--      <small>{{getDate(post.createdAt)}}</small>-->
+    <small>{{ getDate(post.createdAt) }}</small>
+    <button class="post-view-btn" (click)="viewPost(post?.id)">...</button>
+  </div>
+  <span>{{ post.content }}</span>
+  <div class="comment-and-like__icon">
+    <span>
+      <svg icon="comment"/>
+      {{post.comments.length}}
+    </span>
+    <span>
+      <svg icon="like"/>
+      {{post.likes}}
+    </span>
+  </div>
+  <div class="comments__wrapper">
+    @for (comment of post.comments; track comment.id) {
+      <app-comment [comment]="comment"/>
+    }
+  </div>
+  <app-post-input [border]="true"/>
+</div>

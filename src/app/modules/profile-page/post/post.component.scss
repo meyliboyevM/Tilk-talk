@@ -1,0 +1,59 @@
+:host {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  grid-template-rows: 400px;
+  grid-gap: 1rem;
+  padding: 16px;
+  background: var(--dark-color);
+  margin-bottom: 20px;
+}
+img {
+  width: 30px ;
+  height: 30px ;
+  border-radius: 50%;
+}
+
+.post-body {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  .name-text {
+    display: grid;
+    grid-template-columns: 100px 1fr 20px;
+    align-items: center;
+    grid-gap: 20px;
+  }
+
+  .post-view-btn {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    cursor: pointer;
+    font-size: large;
+  }
+
+  .comment-and-like__icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.comments__wrapper {
+  overflow-y: auto;
+  height: 200px;
+  padding-right: 20px;
+}
+
